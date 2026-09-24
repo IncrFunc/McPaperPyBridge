@@ -1,0 +1,26 @@
+# Give the same secret to the Python service (PAPERPY_TOKEN).
+token: "change-this-secret"
+server-id: "survival"
+python-url: "http://127.0.0.1:8765/minecraft/events"
+connect-timeout-ms: 2000
+read-timeout-ms: 3000
+action-server:
+  host: "127.0.0.1"
+  port: 8766
+
+# Only command roots listed here may be run from Python. Add "time" to allow
+# bridge.run_command("time set day"). Commands are dispatched as the console.
+actions:
+  allowed-commands:
+    - "list"
+
+
+# Only these events are registered and forwarded by default. Use simple names,
+# fully qualified class names, or legacy aliases (chat/join/quit).
+# Add other events from the Wiki as needed; use "*" to opt into all events.
+events:
+  include:
+    - "AsyncPlayerChatEvent"
+    - "PlayerJoinEvent"
+    - "PlayerQuitEvent"
+  exclude: []

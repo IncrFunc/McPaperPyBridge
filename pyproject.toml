@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "paperpybridge"
+version = "0.1.0"
+description = "Python SDK for a Paper Minecraft server bridge"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{name = "PaperPyBridge contributors"}]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Topic :: Games/Entertainment",
+]
+
+[tool.setuptools]
+package-dir = {"" = "python"}
+
+[tool.setuptools.packages.find]
+where = ["python"]
+

@@ -1,0 +1,33 @@
+# PlayerChatTabCompleteEvent
+
+[[Home-en|Home]] / [[Category-player-en|player]]
+
+- Java class: `org.bukkit.event.player.PlayerChatTabCompleteEvent`
+- Parent class: `org.bukkit.event.player.PlayerEvent`
+- Python subscription: `PlayerChatTabCompleteEvent`
+- Python constant: `Events.PLAYER_CHAT_TAB_COMPLETE`
+- Cancellable: No
+- Player available: Possible at runtime
+- HandlerList owner: `org.bukkit.event.player.PlayerChatTabCompleteEvent`
+- [Official Paper Javadoc](https://jd.papermc.io/paper/1.16.5/org/bukkit/event/player/PlayerChatTabCompleteEvent.html)
+
+## Python example
+
+```python
+from paperpybridge import Events
+
+@bridge.on(Events.PLAYER_CHAT_TAB_COMPLETE)
+def on_event(event):
+    print(event.event, event.data)
+```
+
+## `data` fields
+
+| Field | JSON type | Java getter | Java return type | Declared in |
+| --- | --- | --- | --- | --- |
+| `chatMessage` | string | `getChatMessage()` | `java.lang.String` | `org.bukkit.event.player.PlayerChatTabCompleteEvent` |
+| `lastToken` | string | `getLastToken()` | `java.lang.String` | `org.bukkit.event.player.PlayerChatTabCompleteEvent` |
+
+[[Data-Format-en|Wire format and limits]] · [[Event-org-bukkit-event-player-playerchattabcompleteevent|中文]]
+
+If this event is not enabled, add its Java class or simple name to `events.include` in the Paper plugin configuration.

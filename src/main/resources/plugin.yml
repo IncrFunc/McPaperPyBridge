@@ -1,0 +1,6 @@
+name: PaperPyBridge
+version: 0.1.0
+main: dev.paperpybridge.PaperPyBridgePlugin
+api-version: 1.16
+description: Connect Paper events and actions to a Python service.
+
